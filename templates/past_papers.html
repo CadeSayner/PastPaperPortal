@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.95">
+    <link rel="icon" type="image/png" href="/static/images/Untitled.png">
+    <title>Get All Your Past Papers | Convenient Zip Download | PastPaperPortal.co.za</title>
+    <meta name="description" content="Simplify your study journey! Download all of the past papers you need in one convenient folder for effortless exam preparation. Access all Matric past papers in one click at PastPaperPortal.co.za.">
+    <meta name="keywords" content="Download all past papers, Matric past papers zip, Past exam papers, All Matriculation papers, Convenient past papers, Matriculation past exam papers, Matriculation exams download">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
+
+    <title>Get Past Papers</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap" rel="stylesheet">
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Your Custom CSS -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            padding-top: 5rem;
+            min-height: 150vh;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            width: 100%
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #d6d8f3;
+            border: 1px solid #c8d3e0;
+            padding: 5px;
+            z-index: 1000;
+        }
+        .dropdown.show .dropdown-menu {
+            display: block;
+        }
+        .checkbox-option {
+            margin-bottom: 5px;
+        }
+        .centered-div {
+            text-align: center;
+            background-color: rgba(230, 234, 255, 0.95);
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            font-weight: 300;
+        }
+        .row-content {
+            margin-bottom: 20px;
+        }
+        body {
+            background-image: url('/static/images/grad.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .text-center{
+            color: rgb(56, 55, 70);
+            font-weight: 300
+        }
+        .icon {
+        width: 2em; /* Adjust the width as needed */
+        height: auto;
+        vertical-align: middle;
+        margin-right: 5px;
+        }
+        .cookieconsent{
+            width: 100%;
+            margin:auto;
+            align-items: center;
+            text-align: center;
+        }
+        .site-footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(216, 230, 241, 0.75);
+        padding: 20px;
+        text-align: center;
+        }
+
+        .site-footer p {
+        margin-bottom: 10px;
+        font-weight: 500;
+        }
+
+        .site-footer a {
+        color: #345c7e;
+        text-decoration: none;
+        font-weight: 500;
+        }
+
+        .site-footer a:hover {
+        text-decoration: underline;
+        font-weight: 500;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <img src="/static/images/Untitled.png" alt="PDF" class="icon">
+        <a class="navbar-brand" href="home">Past Paper Portal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="home">Search</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+    <!-- Main Content -->
+    <div style=" margin-top:5%; width:25em;"class="container mt-6">
+        
+        <form action="process_request" method="post">
+            <div class="centered-div">
+                <h2 class="text-center">Get Your Personalised Past Paper Folder!</h2>
+                <!-- First Row -->
+                <br>
+                <div class="row row-content">
+                    <div class="col-md-6">
+                        <!-- Second Column Content -->
+                        <div class="form-group">
+                            <div class="dropdown">
+                                <button style="display:block; width:100%" class="btn btn-light dropdown-toggle" type="button">
+                                    Select Years
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="subjectDropdown">
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" name="timeframe" value="2016">
+                                        <label for="maths">2016</label>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" name="timeframe" value="2017">
+                                        <label for="science">2017</label>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" name="timeframe" value="2018">
+                                        <label for="science">2018</label>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" name="timeframe" value="2019">
+                                        <label for="science">2019</label>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" name="timeframe" value="2020">
+                                        <label for="science">2020</label>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" name="timeframe" value="2021">
+                                        <label for="science">2021</label>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" name="timeframe" value="2022">
+                                        <label for="science">2022</label>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" name="timeframe" value="2023">
+                                        <label for="science">2023</label>
+                                    </div>
+                                    <!-- Add more subject options -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Second Column Content -->
+                        <div class="form-group">
+                            <div class="dropdown">
+                                <button style="display:block; width:100%"class="btn btn-light dropdown-toggle" type="button">
+                                    Select Subjects
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="subjectDropdown">
+                                    <div class="checkbox-option ">
+                                        <input type="checkbox" name="subjects" value="Mathematics">
+                                        <label for="maths">Mathematics</label>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" name="subjects" value="Physical Sciences">
+                                        <label for="science">Physical Sciences</label>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" name="subjects" value="Life Sciences">
+                                        <label for="science">Life Sciences</label>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" name="subjects" value="Afrikaans (FAL)">
+                                        <label for="science">Afrikaans (FAL)</label>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" name="subjects" value="English (HL)">
+                                        <label for="science">English (HL)</label>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" name="subjects" value="English (FAL)">
+                                        <label for="science">English (FAL)</label>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" name="subjects" value="IsiZulu (FAL)">
+                                        <label for="science">IsiZulu (FAL)</label>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" name="subjects" value="Tourism">
+                                        <label for="science">Tourism</label>
+                                    </div>
+                                    <!-- Add more subject options -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            <!-- Second Row -->
+
+            <!-- Third Row -->
+            <div class="row row-content">
+                <div class="col">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="midYear" name="midYear">
+                        <label class="custom-control-label" for="midYear">Include May-June</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-content">
+                <div class="col">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="supplementary" name="supplementary">
+                        <label class="custom-control-label" for="supplementary">Include Supplementary</label>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row row-content">
+                <div class="col">
+                    <button class="btn btn-light" type="submit">
+                        Get Past Papers
+                    </button>
+                </div>
+         </div>
+
+            
+        </div>
+    </form>
+    <br>
+    <div id="cookieConsent" class="alert alert-info cookieconsent" role="alert">
+        This website uses cookies to ensure you get the best experience on our website. 
+        <button id="acceptCookies" class="btn btn-primary btn-sm">Got it!</button>
+    </div>
+    <br> <br> <br> <br> <br> <br> <br> <br> <br>
+    <footer class="site-footer">
+        <p>&copy; 2023 Past Paper Portal. All rights reserved.</p>
+        <a href="/privacy_policy">Privacy Policy</a> <!-- Replace "/privacy-policy" with the actual link to your privacy policy -->
+    </footer>
+    <script>
+        // Cookie consent logic
+        document.addEventListener("DOMContentLoaded", function() {
+            if (!Cookies.get('cookieConsent')) {
+                document.getElementById('cookieConsent').style.display = 'block';
+            }else{
+                document.getElementById('cookieConsent').style.display = 'none'
+            }
+        });
+
+        document.getElementById('acceptCookies').addEventListener('click', function() {
+            Cookies.set('cookieConsent', 'true', { expires: 365 });
+            document.getElementById('cookieConsent').style.display = 'none';
+        });
+    </script>
+    <!-- Bootstrap JS and other scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+         $(document).on('click', function (e) {
+            if (!$(e.target).closest('.dropdown').length) {
+                $('.dropdown-menu').hide();
+            }
+        });
+        $('.dropdown-toggle').on('click', function() {
+            $(this).parent().find('.dropdown-menu').toggle();
+        });
+    </script>
+</body>
+</html>
+
+
