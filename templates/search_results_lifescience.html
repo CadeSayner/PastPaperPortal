@@ -102,46 +102,38 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <img src="/static/images/Untitled.png" alt="PDF" class="icon">
-        <a class="navbar-brand" href="home">Past Paper Portal</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Inside your navbar -->
-        <ul class="navbar-nav ml-auto">
-            <!-- Other navbar items -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="searchResultsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    2022 Past Papers
-                </a>
-                <div class="dropdown-menu" aria-labelledby="searchResultsDropdown">
-                    <a class="dropdown-item" href="/search/mathematics">Mathematics Past Papers 2022</a>
-                    <a class="dropdown-item" href="/search/accounting">Accounting Past Papers 2022</a>
-                    <a class="dropdown-item" href="/search/lifescience">Life Science Past Papers 2022</a>
-                    <a class="dropdown-item" href="/search/afrikaans">Afrikaans Past Papers 2022</a>
-                    <a class="dropdown-item" href="/search/isiZulu">IsiZulu Past Papers 2022</a>
-                    <a class="dropdown-item" href="/search/physics">Physics Past Papers 2022</a>
-                    <a class="dropdown-item" href="/search/tourism">Tourism Past Papers 2022</a>
-                    <a class="dropdown-item" href="/search/english">English Past Papers 2022</a>
-                    <!-- Add other search result links here with descriptive text -->
-                </div>
-            </li>
-        </ul>
-
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#getExamsSection">Get Your Exams</a>
-                </li>
-            </ul>
+        <div class="container">
+            <img src="/static/images/Untitled.png" alt="PDF" class="icon">
+            <a class="navbar-brand" href="/home">Past Paper Portal</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            2022 Matric Past Papers
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/search/mathematics">Mathematics Past Papers 2022</a>
+                            <a class="dropdown-item" href="/search/accounting">Accounting Past Papers 2022</a>
+                            <a class="dropdown-item" href="/search/lifescience">Life Science Past Papers 2022</a>
+                            <a class="dropdown-item" href="/search/afrikaans">Afrikaans Past Papers 2022</a>
+                            <a class="dropdown-item" href="/search/isiZulu">IsiZulu Past Papers 2022</a>
+                            <a class="dropdown-item" href="/search/physics">Physics Past Papers 2022</a>
+                            <a class="dropdown-item" href="/search/tourism">Tourism Past Papers 2022</a>
+                            <a class="dropdown-item" href="/search/english">English Past Papers 2022</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <main role="main" class="container">
         <form action="/search_results" method="GET" id="searchSection">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Search for past papers" name="paper_name">
+                <input type="search" class="form-control mr-sm-2" placeholder="Search for past papers" name="paper_name">
                 <div class="input-group-append">
                     <button class="btn btn-light" type="submit">Search</button>
                 </div>
@@ -316,7 +308,7 @@
                 </tbody>
             </table>
         </div>
-
+        <br> <br>
         <div style="background-color: rgba(255, 255, 255, 0.85);" class="container text-center py-5" id="getExamsSection">
             <div class="row">
                 <div class="col-lg-8 mx-auto">

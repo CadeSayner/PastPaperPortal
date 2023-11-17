@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.95">
     <link rel="icon" type="image/png" href="/static/images/Untitled.png">
     <title>Get All Your Past Papers | Convenient Zip Download | PastPaperPortal.co.za</title>
-    <meta name="description" content="Simplify your study journey! Download all of the past papers you need in one convenient folder for effortless exam preparation. Access all Matric past papers in one click at PastPaperPortal.co.za.">
+    <meta name="description" content="Download all the past papers you need in a tailormade, personalised folder for free. It can be a hassle to sort through and organise matric past papers that you need. Our easy to use tool allows you to choose which years and subjects you want and delivers a custom, organised folder tailored to your specifications.">
     <meta name="keywords" content="Download all past papers, Matric past papers zip, Past exam papers, All Matriculation papers, Convenient past papers, Matriculation past exam papers, Matriculation exams download">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
 
@@ -19,86 +19,113 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Your Custom CSS -->
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f8f9fa;
-            padding-top: 5rem;
-            min-height: 150vh;
-        }
-        .dropdown {
+
+            body {
+                font-family: 'Roboto', sans-serif;
+                background-color: #f8f9fa;
+                padding-top: 5rem;
+                min-height: 150vh;
+            }
+            .dropdown {
+                position: relative;
+                display: inline-block;
+                width: 100%
+            }
+            .dropdown-menu {
+                display: none;
+                position: absolute;
+                background-color: #d6d8f3;
+                border: 1px solid #c8d3e0;
+                padding: 5px;
+                z-index: 1000;
+            }
+            .dropdown.show .dropdown-menu {
+                display: block;
+            }
+            .checkbox-option {
+                margin-bottom: 5px;
+            }
+            .centered-div {
+                text-align: center;
+                background-color: rgba(230, 234, 255, 0.95);
+                padding: 20px;
+                margin-top: 20px;
+                border-radius: 10px;
+                font-weight: 300;
+            }
+            .row-content {
+                margin-bottom: 20px;
+            }
+            body {
+                background-image: url('/static/images/grad.webp');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .text-center{
+                color: rgb(56, 55, 70);
+                font-weight: 300
+            }
+            .icon {
+            width: 2em; /* Adjust the width as needed */
+            height: auto;
+            vertical-align: middle;
+            margin-right: 5px;
+            }
+            .cookieconsent{
+                width: 100%;
+                margin:auto;
+                align-items: center;
+                text-align: center;
+            }
+            .site-footer {
             position: relative;
-            display: inline-block;
-            width: 100%
-        }
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            background-color: #d6d8f3;
-            border: 1px solid #c8d3e0;
-            padding: 5px;
-            z-index: 1000;
-        }
-        .dropdown.show .dropdown-menu {
-            display: block;
-        }
-        .checkbox-option {
-            margin-bottom: 5px;
-        }
-        .centered-div {
-            text-align: center;
-            background-color: rgba(230, 234, 255, 0.95);
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-            font-weight: 300;
-        }
-        .row-content {
-            margin-bottom: 20px;
-        }
-        body {
-            background-image: url('/static/images/grad.webp');
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        .text-center{
-            color: rgb(56, 55, 70);
-            font-weight: 300
-        }
-        .icon {
-        width: 2em; /* Adjust the width as needed */
-        height: auto;
-        vertical-align: middle;
-        margin-right: 5px;
-        }
-        .cookieconsent{
+            bottom: 0;
             width: 100%;
-            margin:auto;
-            align-items: center;
+            background-color: rgba(216, 230, 241, 0.75);
+            padding: 20px;
             text-align: center;
-        }
-        .site-footer {
-        position: relative;
-        bottom: 0;
-        width: 100%;
-        background-color: rgba(216, 230, 241, 0.75);
-        padding: 20px;
-        text-align: center;
-        }
+            }
+    
+            .site-footer p {
+            margin-bottom: 10px;
+            font-weight: 500;
+            }
+    
+            .site-footer a {
+            color: #345c7e;
+            text-decoration: none;
+            font-weight: 500;
+            }
+    
+            .site-footer a:hover {
+            text-decoration: underline;
+            font-weight: 500;
+            }
+            .maincontent{
+                margin-top:5%; width:25em;
+            }
+        
 
-        .site-footer p {
-        margin-bottom: 10px;
-        font-weight: 500;
-        }
-
-        .site-footer a {
-        color: #345c7e;
-        text-decoration: none;
-        font-weight: 500;
-        }
-
-        .site-footer a:hover {
-        text-decoration: underline;
-        font-weight: 500;
+        @media (max-width: 768px) {
+            
+            .maincontent{
+                margin-top:5%; 
+                width:20em;
+            }
+            body {
+                font-family: 'Roboto', sans-serif;
+                background-color: #f8f9fa;
+                padding-top: 5rem;
+                min-height: 150vh;
+                font-size: large;
+            }
+            .checkboxlabel{
+                font-weight: 300
+            }
+            .text-center{
+                color: rgb(56, 55, 70);
+                font-weight: 500
+            }
         }
 
     </style>
@@ -121,7 +148,7 @@
 
     </nav>
     <!-- Main Content -->
-    <div style=" margin-top:5%; width:25em;"class="container mt-6">
+    <div class="container mt-6 maincontent">
         
         <form action="process_request" method="post">
             <div class="centered-div">
@@ -228,15 +255,15 @@
                 <div class="col">
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="midYear" name="midYear">
-                        <label class="custom-control-label" for="midYear">Include May-June</label>
+                        <label class="checkboxlabel custom-control-label" for="midYear">Include May-June</label>
                     </div>
                 </div>
             </div>
             <div class="row row-content">
                 <div class="col">
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="supplementary" name="supplementary">
-                        <label class="custom-control-label" for="supplementary">Include Supplementary</label>
+                        <input type="checkbox" class="checkboxlabel custom-control-input" id="supplementary" name="supplementary">
+                        <label class="checkboxlabel custom-control-label" for="supplementary">Include Supplementary</label>
                     </div>
                 </div>
             </div>
@@ -293,5 +320,3 @@
     </script>
 </body>
 </html>
-
-

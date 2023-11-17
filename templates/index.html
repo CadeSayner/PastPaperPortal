@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="/static/images/Untitled.png">
-    <title>Past Paper Portal - Matric Past Papers | Search For And Download Matric Past Papers</title>
-    <meta name="description" content="Find, Search, and download Matric past papers conveniently at PastPaperPortal.co.za. Access a comprehensive collection of Matric examination papers to ace your exams.">
+    <title>Past Paper Portal - Find All Your Matric Past Papers Here!| Search For And Download Matric Past Papers</title>
+    <meta name="description" content="Find, Search, and Download Matric past papers conveniently at PastPaperPortal.co.za. Access a comprehensive collection of matric examination papers to ace your exams.">
     <meta name="keywords" content="Matric past papers, Matric exams, Past Matric papers, Matric examination, Matric past papers, Matric exams, Matric past exam papers">
 
     <!-- Bootstrap CSS -->
@@ -94,6 +94,23 @@
         text-decoration: underline;
         font-weight: 500;
         }
+
+        @media (max-width: 768px) {
+            .jumbotrontext {
+                font-size: xx-large;
+                font-weight: 400;
+            }
+            .lead{
+                font-size: medium;
+                font-weight: 300;
+            }
+        }
+
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -115,12 +132,12 @@
 
     <main role="main" class="container">
         <div  class="jumbotron">
-            <h1 class="display-4">Find All Your Matric Past Papers Here!</h1>
+            <h1 class="display-4 jumbotrontext">Find All Your Matric Past Papers Here!</h1>
             <p class="lead">Access your past papers conveniently in one place.</p>
             <hr class="my-4">
             <form action="/search_results" method="GET" id="searchSection">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search for past papers" name="paper_name">
+                    <input type="search" class="form-control mr-sm-2" placeholder="Search for past papers" name="paper_name">
                     <div class="input-group-append">
                         <button class="btn btn-light" type="submit">Search</button>
                     </div>
@@ -132,7 +149,8 @@
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <h2 class="mb-4">Download All Your Exams in One Folder</h2>
-                    <p class="lead mb-4">Access all past exams in a convenient zip folder for free. Streamline your study process!</p>
+                    <p class="lead mb-4">Download all the past papers you need in a tailormade, personalised folder for free.</p>
+
                     <a href="/past_papers" class="btn btn-dark btn-lg get-exams-btn">Get Your Exams</a>
                 </div>
             </div>
