@@ -33,7 +33,9 @@ def create_zip(subjects, years, mid, sup):
                 # Create the subject's year folder in the zip file
                 zip_file.write(os.path.join(base_directory, year_folder), year_folder)
                 for d in os.listdir(os.path.join(base_directory, year_folder)):
-                    if ((d == "Supplementary" ) and (not sup)) or ((d=="May-June") and (not mid)):
+                    if ((d == "Supplementary" ) and (not sup)):
+                        continue
+                    if ((d=="May-June") and (not mid)):
                         continue
                     session_folder = os.path.join(year_folder, d)
                     zip_file.write(os.path.join(base_directory, session_folder), session_folder)
@@ -110,7 +112,7 @@ def process_request():
     if(sup == "on"):
         sup = True
     else:
-        mid = False
+        sup = False
     zip_buffer = create_zip(subjects, years, mid, sup)
     return send_file(zip_buffer, download_name='past_papers.zip', as_attachment=True)
 
@@ -126,6 +128,7 @@ def search_results():
     # Perform fuzzy matching and scoring
     processed_results = []
     for result in results:
+        result = result.replace("\n", "")
         similarity_score_partial = fuzz.partial_ratio(paper_name.lower(), result.lower())
         similarity_score_token = fuzz.partial_token_sort_ratio(paper_name.lower(), result.lower())
 
