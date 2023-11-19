@@ -56,13 +56,13 @@ def past_papers():
 def privacy_policy():
     return render_template('privacy_policy.html')
 
-@app.route('/')
+@app.route('/home')
 def index():
     # This is the route for the root path
-    return 'Welcome to the root path!'
+    return render_template('index.html')
 
-@app.route('/home')
-def home():
+@app.route('/')
+def landing():
     return render_template('index.html')
 
 @app.route('/search/mathematics')
