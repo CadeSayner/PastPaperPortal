@@ -101,6 +101,11 @@ def search_afrikaans():
 def search_isiZulu():
     return render_template('search_results_isiZulu.html')
 
+@app.route('/search/IsiZulu')
+def search_IsiZulu():
+    return render_template('search_results_isiZulu.html')
+
+
 @app.route('/process_request', methods=['POST'])
 def process_request():
     # Retrieve form data
