@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="google-adsense-account" content="ca-pub-1451374957943349">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="/static/images/Untitled.png">
@@ -115,18 +116,31 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <img src="/static/images/Untitled.png" alt="PDF" class="icon">
-        <a class="navbar-brand" href="#">Past Paper Portal</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#getExamsSection">Get Your Exams</a>
-                </li>
-            </ul>
+        <div class="container">
+            <img src="/static/images/Untitled.png" alt="PDF" class="icon">
+            <a class="navbar-brand" href="/home">Past Paper Portal</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            2022 Matric Past Papers
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/search/mathematics">Mathematics Past Papers 2022</a>
+                            <a class="dropdown-item" href="/search/accounting">Accounting Past Papers 2022</a>
+                            <a class="dropdown-item" href="/search/lifescience">Life Science Past Papers 2022</a>
+                            <a class="dropdown-item" href="/search/afrikaans">Afrikaans Past Papers 2022</a>
+                            <a class="dropdown-item" href="/search/isiZulu">IsiZulu Past Papers 2022</a>
+                            <a class="dropdown-item" href="/search/physics">Physics Past Papers 2022</a>
+                            <a class="dropdown-item" href="/search/tourism">Tourism Past Papers 2022</a>
+                            <a class="dropdown-item" href="/search/english">English Past Papers 2022</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -149,7 +163,7 @@
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <h2 class="mb-4">Download All Your Exams in One Folder</h2>
-                    <p class="lead mb-4">Download all the Grade 12 past exams you need in a tailormade, personalised folder for free.</p>
+                    <p class="lead mb-4">Say goodbye to the hassle of searching for and organizing Grade 12 past papers! Download a custom-tailored, personalized zip folder containing all the past exam papers you need, effortlessly. </p>
 
                     <a href="/past_papers" class="btn btn-dark btn-lg get-exams-btn">Get Your Exams</a>
                 </div>

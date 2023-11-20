@@ -69,6 +69,10 @@ def landing():
 def search_mathematics():
     return render_template('search_results_mathematics.html')
 
+@app.route('/test')
+def test():
+    return render_template('test.html')
+
 @app.route('/search/physics')
 def search_physics():
     return render_template('search_results_physics.html')
